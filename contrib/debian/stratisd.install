@@ -1,2 +1,2 @@
-debian/bin/stratisd usr/bin
-src/stratisd usr/lib/stratis
+debian/bin/chavezcoind usr/bin
+src/chavezcoind usr/lib/chavezcoin

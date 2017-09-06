@@ -1,7 +1,7 @@
 src/*.exe
-src/stratis
-src/stratisd
-src/test_stratis
+src/chavezcoin
+src/chavezcoind
+src/test_chavezcoin
 src/build.h
 .*.swp
 *.*~*
@@ -10,11 +10,11 @@ src/build.h
 *.orig
 *.o
 *.patch
-.stratis
+.chavezcoin
 #compilation and Qt preprocessor part
 *.qm
 Makefile
-stratis-qt
+chavezcoin-qt
 #resources cpp
 qrc_*.cpp
 #qt creator

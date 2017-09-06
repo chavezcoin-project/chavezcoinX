@@ -112,8 +112,8 @@ public:
         assert(hashGenesisBlock == uint256("0x"));
         assert(genesis.hashMerkleRoot == uint256("0x"));
 
-        // vSeeds.push_back(CDNSSeedData("Seednode1", "seednode1.stratisplatform.com"));
-        // vSeeds.push_back(CDNSSeedData("Seednode2", "seednode2.stratis.cloud"));
+        // vSeeds.push_back(CDNSSeedData("Seednode1", "seednode1.chavezcoinplatform.com"));
+        // vSeeds.push_back(CDNSSeedData("Seednode2", "seednode2.chavezcoin.cloud"));
         vSeeds.push_back(CDNSSeedData("seed_3", "192.189.25.192"));
         vSeeds.push_back(CDNSSeedData("seed_4", "192.189.25.191"));
 
@@ -172,9 +172,9 @@ public:
 
         vFixedSeeds.clear();
         vSeeds.clear();
-        vSeeds.push_back(CDNSSeedData("stratisplatform.com", "testnode1.stratisplatform.com"));
+        vSeeds.push_back(CDNSSeedData("chavezcoinplatform.com", "testnode1.chavezcoinplatform.com"));
 
-        base58Prefixes[PUBKEY_ADDRESS] = std::vector<unsigned char>(1, 65); // stratis test net start with T
+        base58Prefixes[PUBKEY_ADDRESS] = std::vector<unsigned char>(1, 65); // chavezcoin test net start with T
         base58Prefixes[SCRIPT_ADDRESS] = std::vector<unsigned char>(1, 196);
         base58Prefixes[SECRET_KEY]     = std::vector<unsigned char>(1, 65 + 128);
         base58Prefixes[EXT_PUBLIC_KEY] = boost::assign::list_of(0x04)(0x35)(0x87)(0xCF).convert_to_container<std::vector<unsigned char> >();

@@ -1,5 +1,5 @@
 TEMPLATE = app
-TARGET = stratis-qt
+TARGET = chavezcoin-qt
 VERSION = 2.0.0.3
 INCLUDEPATH += src src/json src/qt
 QT += network
@@ -429,8 +429,8 @@ macx:HEADERS += src/qt/macdockiconhandler.h src/qt/macnotificationhandler.h
 macx:OBJECTIVE_SOURCES += src/qt/macdockiconhandler.mm src/qt/macnotificationhandler.mm
 macx:LIBS += -framework Foundation -framework ApplicationServices -framework AppKit
 macx:DEFINES += MAC_OSX MSG_NOSIGNAL=0
-macx:ICON = src/qt/res/icons/stratis.icns
-macx:TARGET = "Stratis-Qt"
+macx:ICON = src/qt/res/icons/chavezcoin.icns
+macx:TARGET = "Chavezcoin-Qt"
 macx:QMAKE_CFLAGS_THREAD += -pthread
 macx:QMAKE_LFLAGS_THREAD += -pthread
 macx:QMAKE_CXXFLAGS_THREAD += -pthread

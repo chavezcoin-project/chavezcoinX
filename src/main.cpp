@@ -22,7 +22,7 @@ using namespace std;
 using namespace boost;
 
 #if defined(NDEBUG)
-# error "Stratis cannot be compiled without assertions."
+# error "Chavezcoin cannot be compiled without assertions."
 #endif
 
 //
@@ -77,7 +77,7 @@ map<uint256, set<uint256> > mapOrphanTransactionsByPrev;
 // Constant stuff for coinbase transactions we create:
 CScript COINBASE_FLAGS;
 
-const string strMessageMagic = "Stratis Signed Message:\n";
+const string strMessageMagic = "Chavezcoin Signed Message:\n";
 
 //////////////////////////////////////////////////////////////////////////////
 //
@@ -2649,7 +2649,7 @@ struct CImportingNow
 
 void ThreadImport(std::vector<boost::filesystem::path> vImportFiles)
 {
-    RenameThread("stratis-loadblk");
+    RenameThread("chavezcoin-loadblk");
 
     CImportingNow imp;
 
