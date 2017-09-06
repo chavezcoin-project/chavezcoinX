@@ -102,14 +102,14 @@ public:
         genesis.nVersion = 1;
         genesis.nTime    = 1470467000;
         genesis.nBits    = bnProofOfWorkLimit.GetCompact();
-        genesis.nNonce   = 1831645;
+        genesis.nNonce   = 3577860;
 
-        MineGenesis(genesis);
+        // MineGenesis(genesis);
 
         hashGenesisBlock = genesis.GetHash();
 
-        assert(hashGenesisBlock == uint256("0x"));
-        assert(genesis.hashMerkleRoot == uint256("0x"));
+        assert(hashGenesisBlock == uint256("0x000006d2347fba2115ebbe538aa5de31dc95bf010beae7a959af7fbc5ba8e7d9"));
+        assert(genesis.hashMerkleRoot == uint256("0x2ec96add26bb0602fcb7096be58b78440c98e1b328c6fa81e7d75e4322f81ed7"));
 
         // vSeeds.push_back(CDNSSeedData("Seednode1", "seednode1.chavezcoinplatform.com"));
         // vSeeds.push_back(CDNSSeedData("Seednode2", "seednode2.chavezcoin.cloud"));
@@ -167,7 +167,7 @@ public:
   
         hashGenesisBlock = genesis.GetHash();
          
-        assert(hashGenesisBlock == uint256("0x00000e246d7b73b88c9ab55f2e5e94d9e22d471def3df5ea448f5576b1d156b9"));
+        // assert(hashGenesisBlock == uint256("0x000006d2347fba2115ebbe538aa5de31dc95bf010beae7a959af7fbc5ba8e7d9"));
 
         vFixedSeeds.clear();
         vSeeds.clear();
@@ -206,7 +206,7 @@ public:
         nDefaultPort = 18444;
         strDataDir = "regtest";
 //        MineGenesis(genesis);
-        assert(hashGenesisBlock == uint256("0x00000d97ffc6d5e27e78954c5bf9022b081177756488f44780b4f3c2210b1645"));
+        // assert(hashGenesisBlock == uint256("0x000006d2347fba2115ebbe538aa5de31dc95bf010beae7a959af7fbc5ba8e7d9"));
 
         vSeeds.clear();  // Regtest mode doesn't have any DNS seeds.
     }
