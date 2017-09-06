@@ -26,7 +26,7 @@ cd /usr/local
 file=/usr/local/chavezcoin
 if [ ! -e "$file" ]
 then
-        sudo git clone https://github.com/chavezcoinproject/chavezcoinX.git
+        sudo git clone https://github.com/chavezcoin-project/chavezcoinX.git
 fi
 
 cd /usr/local/chavezcoin/src
