@@ -72,12 +72,12 @@ public:
         // The characters are rarely used upper ASCII, not valid as UTF-8, and produce
         // a large 4-byte int at any alignment.
         pchMessageStart[0] = 0x70;
-        pchMessageStart[1] = 0x35;
-        pchMessageStart[2] = 0x22;
-        pchMessageStart[3] = 0x05;
-        vAlertPubKey = ParseHex("0486bce1bac0d543f104cbff2bd23680056a3b9ea05e1137d2ff90eeb5e08472eb500322593a2cb06fbf8297d7beb6cd30cb90f98153b5b7cce1493749e41e0284");
-        nDefaultPort = 16178;
-        nRPCPort = 16174;
+        pchMessageStart[1] = 0x61;
+        pchMessageStart[2] = 0x6e;
+        pchMessageStart[3] = 0x61;
+        vAlertPubKey = ParseHex("4d616475726f20736520746520766120612061636162617220656c207265696e61646f20706170752c2063616d62696172656d6f7320656c2073697374656d612e");
+        nDefaultPort = 47047;
+        nRPCPort = 47048;
         bnProofOfWorkLimit = CBigNum(~uint256(0) >> 20);
 
         // Build the genesis block. Note that the output of the genesis coinbase cannot
@@ -88,7 +88,7 @@ public:
         //    CTxIn(COutPoint(0000000000, 4294967295), coinbase 00012a24323020466562203230313420426974636f696e2041544d7320636f6d6520746f20555341)
         //    CTxOut(empty)
         //  vMerkleTree: 12630d16a9
-        const char* pszTimestamp = "http://www.theonion.com/article/olympics-head-priestess-slits-throat-official-rio--53466";
+        const char* pszTimestamp = "A new economy just begin to Venezuela - 2017";
         std::vector<CTxIn> vin;
         vin.resize(1);
         vin[0].scriptSig = CScript() << 0 << CBigNum(42) << vector<unsigned char>((const unsigned char*)pszTimestamp, (const unsigned char*)pszTimestamp + strlen(pszTimestamp));
@@ -104,15 +104,18 @@ public:
         genesis.nBits    = bnProofOfWorkLimit.GetCompact();
         genesis.nNonce   = 1831645;
 
+        MineGenesis(genesis);
+        return
+
         hashGenesisBlock = genesis.GetHash();
 
-        assert(hashGenesisBlock == uint256("0x0000066e91e46e5a264d42c89e1204963b2ee6be230b443e9159020539d972af"));
-        assert(genesis.hashMerkleRoot == uint256("0x65a26bc20b0351aebf05829daefa8f7db2f800623439f3c114257c91447f1518"));
+        assert(hashGenesisBlock == uint256("0x"));
+        assert(genesis.hashMerkleRoot == uint256("0x"));
 
-        vSeeds.push_back(CDNSSeedData("Seednode1", "seednode1.stratisplatform.com"));
-        vSeeds.push_back(CDNSSeedData("Seednode2", "seednode2.stratis.cloud"));
-        vSeeds.push_back(CDNSSeedData("Seednode3", "seednode3.stratisplatform.com"));
-        vSeeds.push_back(CDNSSeedData("Seednode4", "seednode4.stratis.cloud"));
+        // vSeeds.push_back(CDNSSeedData("Seednode1", "seednode1.stratisplatform.com"));
+        // vSeeds.push_back(CDNSSeedData("Seednode2", "seednode2.stratis.cloud"));
+        vSeeds.push_back(CDNSSeedData("seed_3", "192.189.25.192"));
+        vSeeds.push_back(CDNSSeedData("seed_4", "192.189.25.191"));
 
         base58Prefixes[PUBKEY_ADDRESS] = std::vector<unsigned char>(1, 63);
         base58Prefixes[SCRIPT_ADDRESS] = std::vector<unsigned char>(1, 125);
