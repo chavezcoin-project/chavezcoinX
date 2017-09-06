@@ -105,7 +105,6 @@ public:
         genesis.nNonce   = 1831645;
 
         MineGenesis(genesis);
-        return
 
         hashGenesisBlock = genesis.GetHash();
 

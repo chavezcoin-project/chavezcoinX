@@ -23,20 +23,20 @@ sudo apt-get update
 sudo apt-get install -y libdb4.8-dev libdb4.8++-dev
 
 cd /usr/local
-file=/usr/local/chavezcoin
+file=/usr/local/chavezcoinX
 if [ ! -e "$file" ]
 then
         sudo git clone https://github.com/chavezcoin-project/chavezcoinX.git
 fi
 
-cd /usr/local/chavezcoin/src
-file=/usr/local/chavezcoin/src/chavezcoind
+cd /usr/local/chavezcoinX/src
+file=/usr/local/chavezcoinX/src/chavezcoind
 if [ ! -e "$file" ]
 then
         sudo make -j$NPROC -f makefile.unix
 fi
 
-sudo cp /usr/local/chavezcoin/src/chavezcoind /usr/bin/chavezcoind
+sudo cp /usr/local/chavezcoinX/src/chavezcoind /usr/bin/chavezcoind
 
 ################################################################
 # Configure to auto start at boot                                      #
