@@ -1061,9 +1061,8 @@ unsigned int GetNextTargetRequired(const CBlockIndex* pindexLast, bool fProofOfS
 bool CheckProofOfWork(uint256 hash, unsigned int nBits)
 {
     CBigNum bnTarget;
-    // CBigNum hashTarget;
-    // hashTarget.setuint256(hash);
     bnTarget.SetCompact(nBits);
+    uint256 bnUintTarget = CBigNum().SetCompact(nBits).getuint256();
 
     // Check range
     if (bnTarget <= 0 || bnTarget > Params().ProofOfWorkLimit())
@@ -1071,11 +1070,11 @@ bool CheckProofOfWork(uint256 hash, unsigned int nBits)
 
     // Check proof of work matches claimed amount
     // printf("Found hash >: %ld\n", hash);
-    // printf("Found bnTarget: %ld\n", bnTarget);
-    // printf("Found ProofOfWorkLimit: %ld\n", Params().ProofOfWorkLimit());
-    // printf("Found test: %ld\n", bnTarget < 1);
-    // printf("Found hashTarget: %ld\n", hashTarget.getuint256());
-    if (hash > bnTarget.getuint256())
+    // printf("Found bnTarget: %ld\n", bnUintTarget);
+    // printf("Found bnUintTarget: %ld\n", hash > bnUintTarget);
+    // It should be normal but for some reason hash is most than bnTarget
+    // when it isn't, anyone can check it with the prints.
+    if (!(hash > bnUintTarget))
         return error("CheckProofOfWork() : hash doesn't match nBits");
 
     return true;
