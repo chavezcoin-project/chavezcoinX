@@ -102,14 +102,14 @@ public:
         genesis.nVersion = 1;
         genesis.nTime    = 1504954620;
         genesis.nBits    = bnProofOfWorkLimit.GetCompact();
-        genesis.nNonce   = 1831645;
+        genesis.nNonce   = 4483967;
 
-        MineGenesis(genesis);
+        // MineGenesis(genesis);
 
         hashGenesisBlock = genesis.GetHash();
 
-        assert(hashGenesisBlock == uint256("0x"));
-        assert(genesis.hashMerkleRoot == uint256("0x"));
+        assert(hashGenesisBlock == uint256("0x0000090adbe81f5754efe7dffa5c408e3c747fb808c7bc6316ceb26a2d6e65cc"));
+        assert(genesis.hashMerkleRoot == uint256("0xf6fb6cc97a7c6480cfa6e1aa234d15f294b766bcb353961f9e559ed3890f90d9"));
 
         // vSeeds.push_back(CDNSSeedData("Seednode1", "seednode1.chavezcoinplatform.com"));
         // vSeeds.push_back(CDNSSeedData("Seednode2", "seednode2.chavezcoin.cloud"));
@@ -162,13 +162,13 @@ public:
         strDataDir = "testnet";
         // Modify the testnet genesis block so the timestamp is valid for a later start.
         genesis.nBits  = bnProofOfWorkLimit.GetCompact();
-        genesis.nNonce = 2433759;
+        genesis.nNonce = 2634655;
         genesis.nTime    = 1493909211;
-  
-        hashGenesisBlock = genesis.GetHash();
-         
-        assert(hashGenesisBlock == uint256("0x00000e246d7b73b88c9ab55f2e5e94d9e22d471def3df5ea448f5576b1d156b9"));
 
+        hashGenesisBlock = genesis.GetHash();
+
+       // MineGenesis(genesis);
+        assert(hashGenesisBlock == uint256("000003a3413d6e693eb277f058fd21c1f7b70b9ca7554f30311c894d06a3d276"));
         vFixedSeeds.clear();
         vSeeds.clear();
         vSeeds.push_back(CDNSSeedData("chavezcoinplatform.com", "testnode1.chavezcoinplatform.com"));
@@ -201,12 +201,12 @@ public:
         bnProofOfWorkLimit = CBigNum(~uint256(0) >> 1);
         genesis.nTime = 1411111111;
         genesis.nBits  = bnProofOfWorkLimit.GetCompact();
-        genesis.nNonce = 1659424;
+        genesis.nNonce = 1716591;
         hashGenesisBlock = genesis.GetHash();
         nDefaultPort = 18444;
         strDataDir = "regtest";
-//        MineGenesis(genesis);
-        assert(hashGenesisBlock == uint256("0x00000d97ffc6d5e27e78954c5bf9022b081177756488f44780b4f3c2210b1645"));
+       // MineGenesis(genesis);
+        assert(hashGenesisBlock == uint256("0x000004cff165dde20c9802a611e2e8f76986fd056d30e5ec12641b81e0b16c95"));
 
         vSeeds.clear();  // Regtest mode doesn't have any DNS seeds.
     }
