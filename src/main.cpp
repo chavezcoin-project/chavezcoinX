@@ -17,6 +17,7 @@
 #include "txdb.h"
 #include "txmempool.h"
 #include "ui_interface.h"
+#include <bignum.h>
 
 using namespace std;
 using namespace boost;
@@ -1058,6 +1059,8 @@ unsigned int GetNextTargetRequired(const CBlockIndex* pindexLast, bool fProofOfS
 bool CheckProofOfWork(uint256 hash, unsigned int nBits)
 {
     CBigNum bnTarget;
+    // CBigNum hashTarget;
+    // hashTarget.setuint256(hash);
     bnTarget.SetCompact(nBits);
 
     // Check range
@@ -1065,6 +1068,11 @@ bool CheckProofOfWork(uint256 hash, unsigned int nBits)
         return error("CheckProofOfWork() : nBits below minimum work");
 
     // Check proof of work matches claimed amount
+    // printf("Found hash >: %ld\n", hash);
+    // printf("Found bnTarget: %ld\n", bnTarget);
+    // printf("Found ProofOfWorkLimit: %ld\n", Params().ProofOfWorkLimit());
+    // printf("Found test: %ld\n", bnTarget < 1);
+    // printf("Found hashTarget: %ld\n", hashTarget.getuint256());
     if (hash > bnTarget.getuint256())
         return error("CheckProofOfWork() : hash doesn't match nBits");
 

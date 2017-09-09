@@ -95,21 +95,21 @@ public:
         std::vector<CTxOut> vout;
         vout.resize(1);
         vout[0].SetEmpty();
-        CTransaction txNew(1, 1470467000, vin, vout, 0);
+        CTransaction txNew(1, 1504930379, vin, vout, 0);
         genesis.vtx.push_back(txNew);
         genesis.hashPrevBlock = 0;
         genesis.hashMerkleRoot = genesis.BuildMerkleTree();
         genesis.nVersion = 1;
-        genesis.nTime    = 1470467000;
+        genesis.nTime    = 1504930379;
         genesis.nBits    = bnProofOfWorkLimit.GetCompact();
-        genesis.nNonce   = 3577860;
+        genesis.nNonce   = 4340016;
 
         // MineGenesis(genesis);
 
         hashGenesisBlock = genesis.GetHash();
 
-        assert(hashGenesisBlock == uint256("0x000006d2347fba2115ebbe538aa5de31dc95bf010beae7a959af7fbc5ba8e7d9"));
-        assert(genesis.hashMerkleRoot == uint256("0x2ec96add26bb0602fcb7096be58b78440c98e1b328c6fa81e7d75e4322f81ed7"));
+        assert(hashGenesisBlock == uint256("0x00000425758c7a0fa632b170cba81e99d1d01df0f7a3e7a9ab7c5b7be67a07b2"));
+        assert(genesis.hashMerkleRoot == uint256("0xb71e695efbc0a3d7e496a8e65ec7366ca4e779cb72489b4bddce24f14577c927"));
 
         // vSeeds.push_back(CDNSSeedData("Seednode1", "seednode1.chavezcoinplatform.com"));
         // vSeeds.push_back(CDNSSeedData("Seednode2", "seednode2.chavezcoin.cloud"));
