@@ -104,9 +104,11 @@ public:
         genesis.nBits    = bnProofOfWorkLimit.GetCompact();
         genesis.nNonce   = 4483967;
 
+
         // MineGenesis(genesis);
 
         hashGenesisBlock = genesis.GetHash();
+
 
         assert(hashGenesisBlock == uint256("0x0000090adbe81f5754efe7dffa5c408e3c747fb808c7bc6316ceb26a2d6e65cc"));
         assert(genesis.hashMerkleRoot == uint256("0xf6fb6cc97a7c6480cfa6e1aa234d15f294b766bcb353961f9e559ed3890f90d9"));
@@ -205,6 +207,7 @@ public:
         hashGenesisBlock = genesis.GetHash();
         nDefaultPort = 18444;
         strDataDir = "regtest";
+      
        // MineGenesis(genesis);
         assert(hashGenesisBlock == uint256("0x000004cff165dde20c9802a611e2e8f76986fd056d30e5ec12641b81e0b16c95"));
 
