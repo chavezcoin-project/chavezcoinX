@@ -19,6 +19,8 @@ files:
 - "boost-win32-1.47.0-gitian.zip"
 - "chavezcoin-deps-0.0.1.zip"
 script: |
+  g++ --version
+  aa
   #
   mkdir $HOME/qt
   cd $HOME/qt
